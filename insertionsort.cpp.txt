@@ -1,0 +1,25 @@
+
+void Insertion_Sort(int a[], int n){
+	int pos, i;
+	int x;//luu giá tr? a[i] tránh b? ghi dè khi d?i ch? các ph?n t?
+	for(i=1; i<n; i++){//do?n a[0] dã s?p x?p
+		x = a[i]; pos = i-1;
+		//tìm v? trí chèn x
+		while((pos>=0)&&(a[pos]>x)){
+                //k?t h?p d?i ch? các ph?n t? s? d?ng sau x trong danh sách m?i
+			a[pos+1] = a[pos];
+			pos--;
+		}
+		a[pos+1] = x;//chèn x vào danh sách
+	}
+}
+void main()
+{
+	int a[5] = {8, 4, 1, 6, 5};
+	Insertion_Sort(a, 5);
+	cout<<"Mang sau khi sap xep:"<<endl;
+	for(int i=0;i<5;i++){
+		cout<<a[i]<<" ";
+	}
+	system("pause");
+}

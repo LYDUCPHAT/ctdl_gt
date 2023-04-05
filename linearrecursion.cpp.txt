@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+ 
+//hàm d? quy tuy?n tính
+int factorial(int n){
+  if(n == 0) return 1; // di?m d?ng c?a hàm, n?u n == 0 thì k?t thúc hàm và tr? v? 1
+  return n * factorial(n-1);
+}
+//hàm main
+int main() {
+  int n;
+  cout<<"Nh?p vào s? giai th?a b?n mu?n tính: ";
+  cin>>n;
+  int kq = factorial(n);//g?i hàm factorial() d? tính giai th?a cho n và gán k?t qu? vào bi?n kq
+  cout<<"\nK?t qu? \n"<<n<<"! = "<<kq;
+   
+  }

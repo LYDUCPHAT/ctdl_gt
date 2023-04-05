@@ -1,0 +1,10 @@
+
+#include <iostream>
+using namespace std;
+int linearSearch(int arr[], int n, int x){
+        //L?p t?ng ph?n t? c?a m?ng và ki?m tra.
+    for(int i = 0; i < n; i++)
+        if (arr[i] == x)
+            return i;
+        // Tr? v? -1 n?u dã duy?t h?t mà ko tìm th?y.
+    return -1;
